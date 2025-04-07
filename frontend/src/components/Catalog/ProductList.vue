@@ -1,14 +1,16 @@
 <template>
-    <ul v-for="product in this.products" :key="product.id">
-        <li>
-            <Product 
-                :name="product.name"
-                :old_price="product.old_price" 
-                :special_price="product.special_price"
-                :img_url="product.img_url"
-            />
-        </li>
-    </ul>
+    <div>
+        <ul v-for="product in this.products" :key="product.id">
+            <li>
+                <Product 
+                    :name="product.name"
+                    :old_price="product.old_price" 
+                    :special_price="product.special_price"
+                    :img_url="product.img_url"
+                />
+            </li>
+        </ul>
+    </div>
 </template>
 
 <script>
@@ -21,7 +23,7 @@ export default {
     },
     data() {
         return {
-            products,
+            products : [],
             type : 'list',
             max_qty : 6,
         }

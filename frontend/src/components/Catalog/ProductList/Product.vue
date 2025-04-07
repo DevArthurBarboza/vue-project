@@ -2,15 +2,15 @@
     <div class="product">
 
         <div class="image-wrapper">
-            <!-- <img src={{img_url}} alt="Product Image"> -->
+            <img :src=img_url alt="Product Image">
         </div>
         <div class="info">
             <span>{{name}}</span>
         </div>
 
         <div class="price-container"> 
-            <small class="old-price">R$ {{old_price}}</small>
-            <strong class="special-price">R$ {{special_price}}</strong>
+            <small class="old-price">Por R$ {{old_price}}</small>
+            <strong class="special-price">Em R$ {{special_price}}</strong>
         </div>
     </div>
 </template>
