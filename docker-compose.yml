@@ -1,0 +1,7 @@
+services:
+
+  backend:
+    - context: 'backend/src'
+
+  frontend:
+    - context: 'frontend/src'
