@@ -15,6 +15,17 @@ services:
     volumes:
       - mongo_data:/data/db
 
+  nginx:
+    build: ./backend 
+    container_name: web_server
+    restart: always
+    ports:
+      - 80:80
+
+  frontend:
+    build: ./frontend
+    
+
 volumes:
   mongo_data:
     driver: local
