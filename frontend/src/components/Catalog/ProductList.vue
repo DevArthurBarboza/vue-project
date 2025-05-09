@@ -31,9 +31,9 @@ export default {
 
     created(){
         this.products = [
-            { id: 1, name: "Produto A", special_price: 50.00, old_price: 75.00, img_url: "media/dev/cesinha"},
-            { id: 2, name: "Produto B", special_price: 50.00, old_price: 75.00, img_url: "media/dev/cesinha"},
-            { id: 3, name: "Produto C", special_price: 50.00, old_price: 75.00, img_url: "media/dev/cesinha"}
+            { id: 1, name: "Produto A", special_price: 50.00, old_price: 85.00, img_url: "media/dev/cesinha"},
+            { id: 2, name: "Produto B", special_price: 60.00, old_price: 75.00, img_url: "media/dev/cesinha"},
+            { id: 3, name: "Produto C", special_price: 90.00, old_price: 115.00, img_url: "media/dev/cesinha"}
         ]
     }
 }
