@@ -2,22 +2,25 @@
 version: '3.8'
 
 services:
-  mongodb:
-    image: mongo:latest
+  mysql:
+    image: mysql:latest
     container_name: app_database
     restart: always
     ports:
       - "27017:27017"
+    env_file: "backend/db.env"
     environment:
-      MONGO_INITDB_ROOT_USERNAME: admin
-      MONGO_INITDB_ROOT_PASSWORD: secret
-      MONGO_INITDB_DATABASE: vueapp
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: vueapp
     volumes:
-      - mongo_data:/data/db
+      - mysql_data:/data/db
 
 
   node:
-    build: 
+    build:
+
   nginx:
     build: backend 
     container_name: app_webserver
