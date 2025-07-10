@@ -6,7 +6,8 @@
 </template>
 
 <script>
-export default {
+export default { 
+
     name : 'Search',
     setup() {
         return {
@@ -21,6 +22,7 @@ export default {
                 return;
             }
 
+            fetch().then();
             // make ajax call
             
         }

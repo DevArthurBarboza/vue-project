@@ -29,5 +29,21 @@ con.connect(function(err) {
         if(error) throw err;
         console.log(result)
     });
+
+    con.query(
+      'CREATE TABLE category (entity_id INT PRIMARY KEY, name VARCHAR(50) NOT NULL)',
+      (err, result) => {
+          if(error) throw err;
+          console.log(result)
+      });
+
+
+      con.query(
+        "CREATE TABLE category_product (entity_id INT PRIMARY KEY, product_id INT NOT NULL, category_id INT NOT NULL), FOREIGN KEY (product_id) REFERENCES product (entity_id), FOREIGN KEY (category_id) REFERENCES category (entity_id)",
+        (err, result) => {
+            if(error) throw err;
+            console.log(result)
+        });
+
 });
 
